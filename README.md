@@ -1,10 +1,12 @@
 [![Build Status](https://travis-ci.org/manzi-guev/Employee-Management-REST-API-Back-End.svg?branch=develop)](https://travis-ci.org/manzi-guev/Employee-Management-REST-API-Back-End)
 [![Coverage Status](https://coveralls.io/repos/github/manzi-guev/Employee-Management-REST-API-Back-End/badge.svg?branch=develop)](https://coveralls.io/github/manzi-guev/Employee-Management-REST-API-Back-End?branch=develop)
-# Employee-Management REST API
+
+# Employee-Management-REST-API(Backend)
 
 > What are we building?
 
 We are building an Employee management REST API that will help managers all around the world to be able to add, delete, edit, suspend and activate employees.
+
 > Who are we building it for?
 
 Everyone in the world
@@ -22,31 +24,36 @@ Everyone in the world
 
 # API Endpoints
 
-| Request Routes                 | Methods |                              Description | Completed |
-| :----------------------------- | :-----: | ---------------------------------------: | :--------:|
-| /user/signup            |  Post   |                        users can sign up | Yes|
-| /user/sigin             |  Post   |                        users can sign in | Yes |
-| /employees              |  Post   |            manager can create employee | Yes |
-| /employees              |   Get   |              manager can view all employees | Yes|
-| /employees/:id          | Delete  |                manager can delete employees | Yes|
-| /employees/:id  |  Put  |  manager can edit employee | No|
-| /employees/:id/activate  |  Put  |  manager can activate employee | Yes|
-| /employees/:id/suspend |  Put  | manager can suspend employee | Yes|
+| Request Routes          | Methods |                    Description | Completed |
+| :---------------------- | :-----: | -----------------------------: | :-------: |
+| /user/signup            |  Post   |              users can sign up |    Yes    |
+| /user/sigin             |  Post   |              users can sign in |    Yes    |
+| /employees              |  Post   |    manager can create employee |    Yes    |
+| /employees              |   Get   | manager can view all employees |    Yes    |
+| /employees/:id          | Delete  |   manager can delete employees |    Yes    |
+| /employees/:id          |   Put   |      manager can edit employee |    No     |
+| /employees/:id/activate |   Put   |  manager can activate employee |    Yes    |
+| /employees/:id/suspend  |   Put   |   manager can suspend employee |    Yes    |
 
 # Validations
+
 - Email and NationalId have been validated as requested
 - Phone number has not been validated
 - Registration age has not been validated
 
 # Requirements
+
 - Manager's password has been encrypted
 - The system throws excpections messages when error occurs apart from Route error handling and Server error
-# Authentication
-- Done using JWT to generate token
-- If not logged in, the manager is not authaurized to do anything. 
-# API Documentation
-[Documentation link](https://documenter.getpostman.com/view/8149811/SWLiZ62U)
 
+# Authentication
+
+- Done using JWT to generate token
+- If not logged in, the manager is not authaurized to do anything.
+
+# API Documentation
+
+[Documentation link](https://documenter.getpostman.com/view/8149811/SWLiZ62U)
 
 # Backend, Frameworks and other tools used
 
@@ -54,7 +61,7 @@ Everyone in the world
 - Express
 - Mocha and Chai(for testing)
 - babel
-
+- hapi/Joi for validation
 
 # Installation Guide
 
