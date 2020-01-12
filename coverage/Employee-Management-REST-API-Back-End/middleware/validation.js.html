@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">53.13% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/32</span>
+                <span class='fraction'>32/32</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">40% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">40% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">53.13% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>17/32</span>
+                <span class='fraction'>32/32</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -246,7 +246,7 @@
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -271,44 +271,44 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -375,8 +375,8 @@ const signIn = (req, res, next) =&gt; {
   }
   next();
 };
-const <span class="fstat-no" title="function not covered" >createEmployee = (</span>req, res, next) =&gt; {
-  const schema = <span class="cstat-no" title="statement not covered" >{</span>
+const createEmployee = (req, res, next) =&gt; {
+  const schema = {
     employeeName: Joi.string()
       .strict()
       .trim()
@@ -401,44 +401,44 @@ const <span class="fstat-no" title="function not covered" >createEmployee = (</s
       .required()
       .trim()
   };
-  const output = <span class="cstat-no" title="statement not covered" >Joi.v</span>alidate(req.body, schema);
-<span class="cstat-no" title="statement not covered" >  if (output.error != null) {</span>
-<span class="cstat-no" title="statement not covered" >    return r</span>es.status(400).json({
+  const output = Joi.validate(req.body, schema);
+  if (output.error != null) {
+    return res.status(400).json({
       status: 400,
       error: `${output.error.details[0].message}`
     });
   }
-<span class="cstat-no" title="statement not covered" >  next();</span>
+  next();
 };
-const <span class="fstat-no" title="function not covered" >activateEmp = (</span>req, res, next) =&gt; {
-  const schema = <span class="cstat-no" title="statement not covered" >{</span>
+const activateEmp = (req, res, next) =&gt; {
+  const schema = {
     status: Joi.string()
       .trim()
       .required()
   };
-  const output = <span class="cstat-no" title="statement not covered" >Joi.v</span>alidate(req.body, schema);
-<span class="cstat-no" title="statement not covered" >  if (output.error != null) {</span>
-<span class="cstat-no" title="statement not covered" >    return r</span>es.status(400).json({
+  const output = Joi.validate(req.body, schema);
+  if (output.error != null) {
+    return res.status(400).json({
       status: 400,
       error: `${output.error.details[0].message}`
     });
   }
-<span class="cstat-no" title="statement not covered" >  next();</span>
+  next();
 };
-const <span class="fstat-no" title="function not covered" >suspendEmp = (</span>req, res, next) =&gt; {
-  const schema = <span class="cstat-no" title="statement not covered" >{</span>
+const suspendEmp = (req, res, next) =&gt; {
+  const schema = {
     status: Joi.string()
       .trim()
       .required()
   };
-  const output = <span class="cstat-no" title="statement not covered" >Joi.v</span>alidate(req.body, schema);
-<span class="cstat-no" title="statement not covered" >  if (output.error != null) {</span>
-<span class="cstat-no" title="statement not covered" >    return r</span>es.status(400).json({
+  const output = Joi.validate(req.body, schema);
+  if (output.error != null) {
+    return res.status(400).json({
       status: 400,
       error: `${output.error.details[0].message}`
     });
   }
-<span class="cstat-no" title="statement not covered" >  next();</span>
+  next();
 };
 export {
   signIn,
@@ -453,7 +453,7 @@ export {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Jan 12 2020 23:11:02 GMT+0200 (Central Africa Time)
+                at Mon Jan 13 2020 00:18:58 GMT+0200 (Central Africa Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

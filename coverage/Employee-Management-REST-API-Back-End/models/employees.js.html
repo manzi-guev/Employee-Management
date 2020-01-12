@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for Employee-Management-REST-API-Back-End/routes/route.js</title>
+    <title>Code coverage report for Employee-Management-REST-API-Back-End/models/employees.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="..\..\prettify.css" />
     <link rel="stylesheet" href="..\..\base.css" />
@@ -18,13 +18,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="..\..\index.html">All files</a> / <a href="index.html">Employee-Management-REST-API-Back-End/routes</a> route.js</h1>
+        <h1><a href="..\..\index.html">All files</a> / <a href="index.html">Employee-Management-REST-API-Back-End/models</a> employees.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -45,7 +45,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -76,7 +76,26 @@
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -84,39 +103,50 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import express from 'express';
-import {
-    signUp,
-    signIn,
-    createEmployee,
-    activateEmp,
-    suspendEmp
-} from '../middleware/validation';
-import employeeController from '../controllers/employees';
-import token from '../middleware/token';
-import userController from '../controllers/user';
-&nbsp;
-const route = express();
-route.post('/user/signup', signUp, userController.signup);
-route.post('/user/signin', signIn, userController.signin);
-route.post('/employees', token, createEmployee, employeeController.create);
-route.get('/employees', token, employeeController.viewEmployees);
-route.delete('/employees/:id', token, employeeController.delete);
-route.put('/employees/:id/activate', token, activateEmp, employeeController.activate);
-route.put('/employees/:id/suspend', token, suspendEmp, employeeController.suspend);
-export default route;</pre></td></tr></table></pre>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const createEmployee = `CREATE TABLE IF NOT EXISTS employees (
+    id SERIAL PRIMARY KEY,
+    employeeName text,
+    nationalId text UNIQUE,
+    phoneNumber text UNIQUE,
+    email text UNIQUE,
+    dateOfBirth text,
+    status text,
+    position text
+)`;
+const insertEmployee = `INSERT INTO employees (
+   employeeName,
+   nationalId,
+   phoneNumber,
+   email,
+   dateOfBirth,
+   status,
+   position
+  ) VALUES ($1,$2,$3,$4,$5,$6,$7) ON CONFLICT DO NOTHING returning *`;
+const findemployees = `select * from employees`;
+const findspecific = `select * from employees where id = ($1)`;
+const deleteEmp = `delete from employees where id = ($1)`;
+const activate = `UPDATE employees SET status = $2 where id = $1`;
+export default {
+  createEmployee,
+  insertEmployee,
+  findemployees,
+  findspecific,
+  deleteEmp,
+  activate
+};</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
