@@ -6,8 +6,10 @@
   "scripts": {
     "start": "npm run createemployees && npm run createuser && nodemon --exec babel-node app.js",
     "createemployees": "node --require babel-polyfill --require babel-register ./db/createEmpTable",
+    "cleantable": "node --require babel-polyfill --require babel-register ./db/clean",
     "createuser": "node --require babel-polyfill --require babel-register ./db/userTable",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "test": "NODE_ENV=TEST npm run cleantable && NODE_ENV=TEST npm run createuser && NODE_ENV=TEST npm run createemployees && NODE_ENV=TEST nyc --reporter=html --reporter=text --require babel-register --require babel-polyfill mocha --timeout 10000 --exit test/user.test.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,11 +19,20 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "bcryptjs": "^2.4.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.2",
     "pg": "^7.17.0"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.8",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "mocha-lcov-reporter": "^1.3.0",
+    "prettier": "^1.19.1"
   }
 }
